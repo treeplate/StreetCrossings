@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './streets.dart';
+import 'streets.dart';
 
 void main() {
   runApp(MyApp());
