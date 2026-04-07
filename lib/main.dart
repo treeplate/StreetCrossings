@@ -44,7 +44,59 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[],
+          children: <Widget>[
+            Text(car.plus1.toString()),
+            Text(car.road.name),
+            Container(
+              width: 50,
+              height: 50,
+              child: Text(car.intersection.one.name),
+              color: Colors.green,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  width: 50,
+                  height: 50,
+                  child: Text(car.intersection.two.name),
+                  color: Colors.green,
+                ),
+                Container(width: 50, height: 50, color: Colors.black),
+                Container(width: 50, height: 50, color: Colors.black)
+              ],
+            ),
+            Container(width: 50, height: 50, color: Colors.black),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextButton(
+                  child: Text("Left"),
+                  onPressed: () {
+                    setState(() {
+                      car.turnLeft();
+                    });
+                  },
+                ),
+                TextButton(
+                  child: Text("Forward"),
+                  onPressed: () {
+                    setState(() {
+                      car.pass();
+                    });
+                  },
+                ),
+                TextButton(
+                  child: Text("Right"),
+                  onPressed: () {
+                    setState(() {
+                      car.turnRight();
+                    });
+                  },
+                )
+              ],
+            ),
+          ],
         ),
       ),
     );
